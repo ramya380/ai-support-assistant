@@ -20,7 +20,9 @@ app.use(
     max: 30
   })
 );
-
+app.get("/", (req, res) => {
+  res.send("AI Support Assistant Backend is running 🚀");
+});
 app.use("/api/chat", chatRoute);
 
 const PORT = process.env.PORT || 5000;
