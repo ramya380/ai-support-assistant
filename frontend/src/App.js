@@ -92,7 +92,7 @@ function App() {
     setMessages(prev => [...prev, userMsg]);
     setLoading(true);
 
-    const res = await fetch("http://localhost:5000/api/chat", {
+    const res = await fetch("https://ai-support-assistant-1-ucu5.onrender.com", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ sessionId, message: input })
